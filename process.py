@@ -4,7 +4,11 @@ import io
 from PIL import Image
 import base64,cv2
 import numpy as np
+from engineio.payload import Payload
 
+
+
+Payload.max_decode_packets = 2048
 
 app = Flask(__name__)
 socketio = SocketIO(app)
